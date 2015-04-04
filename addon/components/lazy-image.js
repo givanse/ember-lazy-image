@@ -19,13 +19,13 @@ export default Component.extend(InViewportMixin, ImageLoadMixin, {
 
   classNames: ['lazy-image-container'],
 
-  concatenatedProperties: ['class'],
+  concatenatedProperties: ['imgClass'],
 
-  class: ['lazy-image'],
+  imgClass: ['lazy-image'],
 
   _classJoin: function() {
-    var classArray = this.get('class'); 
-    this.set('class', classArray.join(' '));
+    var classArray = this.get('imgClass'); 
+    this.set('imgClass', classArray.join(' '));
   }.on('init'),
 
   setupAttributes: on('didInsertElement', function() {

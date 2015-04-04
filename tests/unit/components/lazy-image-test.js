@@ -25,7 +25,7 @@ test('it has correct defaults', function(assert) {
   assert.equal(get(component, 'errorThrown'),      false);
   assert.equal(get(component, 'lazyUrl'),          "//:0");
   assert.equal(get(component, 'defaultErrorText'), 'Image failed to load');
-  assert.equal(get(component, 'class'),            'lazy-image');
+  assert.equal(get(component, 'imgClass'),         'lazy-image');
 });
 
 test('it renders default placeholder', function(assert) {
@@ -122,7 +122,7 @@ test('passing class names for the <img> element', function(assert) {
   assert.expect(1);
 
   var component = this.subject({
-    class: 'img-responsive image-thumbnail'
+    imgClass: 'img-responsive image-thumbnail'
   });
 
   this.render();
